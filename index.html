@@ -6,6 +6,203 @@
     <title>Avio Kompanija</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+<style>body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("AirportPlane3.webp");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  header {
+    background-color: transparent;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  section {
+    margin-bottom: 20px;
+  }
+  
+  h1, h2 {
+    color: #333;
+  }
+  
+  .destination {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .destination img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .destination-info {
+    color: #333;
+    padding: 20px;
+  }
+  
+  .destination-info h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .destination-info p {
+    color: #666;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  footer {
+    background-color: transparent;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Animacija naslova */
+  @keyframes textAnimation {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Primjena animacije na naslov */
+  .animate-title {
+    animation: textAnimation 1s ease-in-out;
+  }
+  
+  /* Glavni blok */
+  #home {
+    text-align: center;
+    padding: 50px;
+  }
+  
+  /* Stil za .destination */
+  .destination {
+    display: inline-block;
+    width: 300px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Efekt prilikom hovera nad .destination */
+  .destination:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Stil za .destination img */
+  .destination img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  /* Stil za .destination-info */
+  .destination-info {
+    padding: 20px;
+  }
+  
+  /* Stil za .destination-info h2 */
+  .destination-info h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  /* Stil za .destination-info p */
+  .destination-info p {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 10px;
+  }
+  
+  /* Stil za #search */
+  #search {
+    text-align: center;
+    padding: 50px;
+  }
+  
+  /* Stil za #search form */
+  #search form {
+    margin-top: 20px;
+  }
+  
+  /* Stil za #search input[type="text"] */
+  #search input[type="text"] {
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+  }
+  
+  /* Stil za #search button */
+  #search button {
+    padding: 10px 20px;
+    background-color: #0099ff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* Stil za footer */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+  }
+</style>
 
 <body>
     <header>
@@ -70,6 +267,15 @@
             </div>
         </section>
 
+        <section id="search">
+            <h2>Pretraži destinacije</h2>
+            <form>
+                <input type="text" placeholder="Unesite destinaciju">
+                <button type="submit">Pretraži</button>
+            </form>
+        </section>
+    </main>
+
         <div class="destination">
             <h2>Destinacija 1</h2>
             <p>Ovdje možete pronaći informacije o putovanju na Destinacija 1.</p>
@@ -109,7 +315,7 @@
             <p>Ovdje možete pronaći informacije o putovanju na Destinacija 6.</p>
             <p>Cijena putovanja: $2500</p>
             <img src="Moskva2.jpg" alt="Destinacija 6">
-        </div>
+      </div>
 
         <section id="search">
             <h2>Pretraži destinacije</h2>
